@@ -10,7 +10,7 @@ ___
 
 #### 목차
 
-1. **IoC (Inversion of Control, 제어의 역전)**
+1. [**IoC (Inversion of Control, 제어의 역전)**](https://github.com/3457soso/study-spring-framework/blob/master/1_spring-intro/01_IoC.md)
 
    - petClinit 프로젝트
    - IoC란?
@@ -20,14 +20,14 @@ ___
 
    
 
-2. **AOP (Aspect Oriented Programming, 관점 지향 프로그래밍)**
+2. [**AOP (Aspect Oriented Programming, 관점 지향 프로그래밍**)](https://github.com/3457soso/study-spring-framework/blob/master/1_spring-intro/02_AOP.md)
 
    - AOP란?
    - 예제 및 사용법
 
    
 
-3. **PSA (Portable Service Abstraction, 서비스 추상화)**
+3. [**PSA (Portable Service Abstraction, 서비스 추상화)**](https://github.com/3457soso/study-spring-framework/blob/master/1_spring-intro/03_PSA.md)
 
    - PSA란?
    - 예시
