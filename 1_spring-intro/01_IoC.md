@@ -6,11 +6,15 @@
 
 1. **IoC (Inversion of Control, 제어의 역전)**
 
+   - petClinit 프로젝트
+   - IoC란?
+   - IoC 컨테이너란? (ApplicationContext)
+   - 빈 (Bean)이란?
+   - 의존성 주입 (DI)
+
 2. AOP (Aspect Oriented Programming, 관점 지향 프로그래밍)
 
-3. PSA (Portable Service Abstraction, 서비스 추상화)
-
-   
+    
 
 ___
 
