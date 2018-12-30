@@ -1,0 +1,7 @@
+import java.sql.*;
+import java.util.Properties;
+
+public class DBDemo {
+	private static final String dbClassname = "com.mysql.jdbc.Driver";
+	private static final String CONNECTION = "jdbc:mysqlL//localhost:3306/mydb";
+}

@@ -4,14 +4,14 @@
 
 #### 목차
 
-1. IoC (Inversion of Control, 제어의 역전)
+1. [IoC (Inversion of Control, 제어의 역전)](https://github.com/3457soso/study-spring-framework/blob/master/1_spring-intro/01_IoC.md)
 
 2. **AOP (Aspect Oriented Programming, 관점 지향 프로그래밍)**
 
-   - [**AOP란?**](#1-AOP란?)
+   - [**AOP란?**](#1-AOP란)
    - [**예제 및 사용법**](#2-예제-및-사용법)
 
-3. PSA (Portable Service Abstraction, 서비스 추상화)
+3. [PSA (Portable Service Abstraction, 서비스 추상화)](https://github.com/3457soso/study-spring-framework/blob/master/1_spring-intro/03_PSA.md)
 
     
 
@@ -19,7 +19,7 @@ ___
 
 ## AOP (Aspect Oriented Programming, 관점 지향 프로그래밍)
 
-### 1. AOP란?
+### 1. AOP란
 
 #### 1) 정의
 

@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class _07_FindDupplication {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set<string> s = new HashSet<String>();
+		String[] sample = {"단어", "중복", "구절", "중복"};
+	}
+
+}

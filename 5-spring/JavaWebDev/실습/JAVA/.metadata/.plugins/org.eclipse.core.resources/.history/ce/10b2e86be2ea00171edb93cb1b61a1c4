@@ -1,0 +1,17 @@
+public class _02_WrapperEx {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(Character.toLowerCase('A'));
+		char c1='4', c2='F';
+		
+		if(Character.isDigit(c1))
+			System.out.println(c1+"은(는) 숫자");
+		if(Character.isAlphabetic(c2))
+			System.out.println(c2+"은(는) 영문자");
+	}
+
+}

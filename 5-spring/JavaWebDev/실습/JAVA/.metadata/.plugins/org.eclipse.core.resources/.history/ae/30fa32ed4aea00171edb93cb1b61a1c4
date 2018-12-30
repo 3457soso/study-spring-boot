@@ -1,0 +1,24 @@
+// 생성자 선언 및 호출 연습
+
+public class Book {
+	String title;
+	String author;
+	
+	public Book(String t){
+		title = t;
+		author = "작자 미상";
+	}
+	
+	public Book(String t, String a){
+		title = t;
+		author = a;
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

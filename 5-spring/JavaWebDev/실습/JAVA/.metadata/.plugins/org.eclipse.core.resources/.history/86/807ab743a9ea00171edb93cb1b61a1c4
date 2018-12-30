@@ -1,0 +1,6 @@
+public class GoodCalc extends Caculator{
+	public abstract int add(int a, int b){
+		return a + b;
+	}
+
+}

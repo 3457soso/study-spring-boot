@@ -1,0 +1,13 @@
+public class GoodCalc extends Caculator{
+	public int add(int a, int b){
+		return a + b;
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

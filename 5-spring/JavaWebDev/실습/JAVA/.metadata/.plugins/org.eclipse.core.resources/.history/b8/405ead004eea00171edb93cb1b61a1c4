@@ -1,0 +1,17 @@
+// 인자로 배열을 전달하는 예시
+
+public class ArrayParameter {
+	static void replaceSpace(char a[]){
+		for(int i=0; i<a.length; i++)
+			if(a[i] == '')
+				a[i] = ',';
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

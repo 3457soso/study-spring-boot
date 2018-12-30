@@ -1,0 +1,19 @@
+import java.sql.*;
+import java.util.Properties;
+
+public class DBDemo {
+	private static final String dbClassname = "com.mysql.jdbc.Driver";
+	private static final String CONNECTION = "jdbc:mysqlL//localhost:3306/mydb";
+	
+	public static void main(String[] args) throws ClassNotFoundException,SQLException{
+		System.out.println(dbClassname);
+		Class.forName(dbClassname);
+		
+		Properties p = new Properties();
+		p.put("user", "root");
+		p.put("password", "thdud439");
+		
+		Connection c = DriveManager.getConnection(CONNECTION, p);
+		System.out.println("DB가 연결되었습니다.");
+	}
+}

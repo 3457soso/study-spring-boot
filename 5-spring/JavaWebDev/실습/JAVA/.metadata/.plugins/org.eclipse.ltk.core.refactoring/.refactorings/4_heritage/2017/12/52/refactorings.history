@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ClassPoint&apos; to &apos;ColorPoint&apos;&#x0A;- Original project: &apos;4_heritage&apos;&#x0A;- Original element: &apos;ClassPoint&apos;&#x0A;- Renamed element: &apos;ColorPoint&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ClassPoint&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{ClassPoint.java[ClassPoint" matchStrategy="1" name="ColorPoint" qualified="false" references="true" similarDeclarations="false" stamp="1514336973274" textual="false" version="1.0"/>
+</session>

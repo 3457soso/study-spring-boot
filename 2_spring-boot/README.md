@@ -48,6 +48,8 @@
 
    - 테스트
 
+   - Spring-Boot-Devtools
+
      
 
 4. **스프링 부트의 기술 (웹 MVC)**

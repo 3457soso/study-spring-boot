@@ -8,13 +8,13 @@
 
    - petClinit 프로젝트
    - [**IoC란?**](#1-IoC란?)
-   - [**IoC 컨테이너란? (ApplicationContext)**](#2-IoC-컨테이너란?-ApplicationContext)
-   - [**빈 (Bean)이란?**](#3-빈-Bean-이란?)
+   - [**IoC 컨테이너란? (ApplicationContext)**](#2-IoC-컨테이너란-ApplicationContext)
+   - [**빈 (Bean)이란?**](#3-빈-Bean-이란)
    - [**의존성 주입 (DI)**](#4-의존성-주입-DI)
 
-2. AOP (Aspect Oriented Programming, 관점 지향 프로그래밍)
+2. [AOP (Aspect Oriented Programming, 관점 지향 프로그래밍)](https://github.com/3457soso/study-spring-framework/blob/master/1_spring-intro/02_AOP.md)
 
-3. PSA (Portable Service Abstraction, 서비스 추상화)
+3. [PSA (Portable Service Abstraction, 서비스 추상화)](https://github.com/3457soso/study-spring-framework/blob/master/1_spring-intro/03_PSA.md)
 
      
 
@@ -82,7 +82,7 @@ ___
 
 ___
 
-### 2. IoC 컨테이너란? ApplicationContext
+### 2. IoC 컨테이너란 ApplicationContext
 
 #### 1) 정의
 
@@ -119,9 +119,11 @@ ___
   }
   ```
 
-  
 
-### 3) 빈 Bean 이란?
+
+___
+
+### 3. 빈 Bean 이란
 
 #### 1) 정의
 
@@ -151,7 +153,9 @@ ___
 
 
 
-### 4) 의존성 주입 DI
+___
+
+### 4. 의존성 주입 DI
 
 - 필요한 의존성을 받아오는 다양한 방법들
 
