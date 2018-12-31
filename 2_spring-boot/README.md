@@ -10,49 +10,37 @@
 
 ### 목차
 
-1. **스프링 부트 시작하기**
+1. [**스프링 부트 시작하기**](https://github.com/3457soso/study-spring-boot/blob/master/2_spring-boot/01_introduction.md)
 
    - 스프링 부트 소개
-
    - 프로젝트 생성 및 구조
 
      
 
-2. **스프링 부트의 원리**
+2. [**스프링 부트의 원리**](https://github.com/3457soso/study-spring-boot/blob/master/2_spring-boot/02_principle.md)
 
    - 의존성 관리
-
    - 자동 설정 (EnableAutoConfiguration)
-
    - 내장 웹 서버 (Tomcat)
-
    - 내장 웹 서버 업그레이드
-
    - 기타
 
      
 
-3. **스프링 부트의 핵심 기능**
+3. [**스프링 부트의 핵심 기능**](https://github.com/3457soso/study-spring-boot/blob/master/2_spring-boot/03_usage_core.md)
 
    - SpringApplication
-
    - 이벤트, 타입, 인자
-
    - 외부 설정 (Properties)
-
    - 타입-세이프 프로퍼티 (@ConfigurationProperties)
-
    - 프로파일
-
    - 로깅
-
    - 테스트
-
    - Spring-Boot-Devtools
 
      
 
-4. **스프링 부트의 기술 (웹 MVC)**
+4. [**스프링 부트의 기술 (웹 MVC)**](https://github.com/3457soso/study-spring-boot/blob/master/2_spring-boot/04_usage_MVC.md)
 
    - 스프링 부트 MVC 소개
    - HttpMessageConverters와 ViewResolver
@@ -65,7 +53,7 @@
 
    
 
-5. **스프링 부트의 기술 (데이터베이스)**
+5. [**스프링 부트의 기술 (데이터베이스)**](https://github.com/3457soso/study-spring-boot/blob/master/2_spring-boot/05_usage_Data.md)
 
    - 인메모리 데이터베이스
    - MySQL과 PostgreSQL
@@ -75,15 +63,14 @@
 
    
 
-6. **스프링 부트의 기술 (스프링 시큐리티)**
+6. [**스프링 부트의 기술 (스프링 시큐리티)**](https://github.com/3457soso/study-spring-boot/blob/master/2_spring-boot/06_usage_Security.md)
 
    - 스프링 시큐리티 시작하기
-
    - 시큐리티 설정 커스터마이징
 
      
 
-7. **스프링 부트의 운영 (Actuator)**
+7. [**스프링 부트의 운영 (Actuator)**](https://github.com/3457soso/study-spring-boot/blob/master/2_spring-boot/07_Actuator.md)
 
    - Actuator 소개
    - JMX와 HTTP
