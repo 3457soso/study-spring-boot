@@ -1,6 +1,0 @@
-import java.sql.*;
-import java.util.Properties;
-
-public class DBDemo {
-	private static final String dbClassname = "com.mysql.jdbc.Driver";
-}

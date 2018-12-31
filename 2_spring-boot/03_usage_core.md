@@ -19,13 +19,11 @@
    - [**테스트**](#7-테스트)
    - [**Spring-Boot-Devtools**](#8-Spring-Boot-Devtools)
 
-   
-
 4. 스프링 부트의 기술 (웹 MVC)
 
 5. 스프링 부트의 기술 (데이터베이스)
 
-6. 스프링 부트의 기술 (보안 및 REST)
+6. 스프링 부트의 기술 (스프링 시큐리티)
 
 7. 스프링 부트의 운영 (Actuator)
 
@@ -711,6 +709,8 @@ ___
       <artifactId>spring-boot-devtools</artifactId>
   </dependency>
   ```
+
+
 
 #### 2) 기능
 

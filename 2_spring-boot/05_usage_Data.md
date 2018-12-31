@@ -14,13 +14,13 @@
 
 5. **스프링 부트의 기술 (데이터베이스)**
 
-   - 인메모리 데이터베이스
-   - MySQL과 PostgreSQL
-   - 스프링 데이터 JPA
-   - 데이터베이스 초기화와 마이그레이션
-   - NoSQL (Redis, MongoDB, Neo4j)
+   - [**인메모리 데이터베이스**](#1-인메모리-데이터베이스)
+   - [**MySQL과 PostgreSQL**](#2-MySQL과-PostgreSQL)
+   - [**스프링 데이터 JPA**](#3-스프링-데이터-JPA)
+   - [**데이터베이스 초기화와 마이그레이션**](#4-데이터베이스-초기화와-마이그레이션)
+   - [**NoSQL (Redis, MongoDB, Neo4j)**](#5-NoSQL)
 
-6. 스프링 부트의 기술 (보안 및 REST)
+6. 스프링 부트의 기술 (스프링 시큐리티)
 
 7. 스프링 부트의 운영 (Actuator)
 
@@ -704,3 +704,4 @@ ___
   spring.data.neo4j.username = neo4j
   spring.data.neo4j.password = qwer1234
   ```
+

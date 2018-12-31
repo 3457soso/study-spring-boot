@@ -12,17 +12,18 @@
 
 4. **스프링 부트의 기술 (웹 MVC)**
 
-   - 스프링 부트 MVC 소개
-   - HttpMessageConverters와 ViewResolver
-   - 리소스 관리 (정적 리소스, 웹 JAR, index.html, favicon)
-   - Thymeleaf와 HtmlUnit
-   - ExceptionHandler
-   - Spring HATEOAS
-   - CORS
+   - [**스프링 부트 MVC 소개**](#1-스프링-부트-MVC-소개)
+   - [**HttpMessageConverters와 ViewResolver**](#2-HttpMessageConverters와-ViewResolver)
+   - [**리소스 관리 (정적 리소스, 웹 JAR, index.html, favicon)**](#3-리소스-관리)
+   - [**Thymeleaf와 HtmlUnit**](#4-Thymeleaf와-HtmlUnit)
+   - [**ExceptionHandler**](#5-ExceptionHandler)
+   - [**Spring HATEOAS**](#6-Spring-HATEOAS)
+   - [**CORS**](#7-CORS)
+   - [**REST Client**](#8-REST-Client)
 
 5. 스프링 부트의 기술 (데이터베이스)
 
-6. 스프링 부트의 기술 (보안 및 REST)
+6. 스프링 부트의 기술 (스프링 시큐리티)
 
 7. 스프링 부트의 운영 (Actuator)
 
@@ -186,7 +187,7 @@ ___
 
 ---
 
-### 3. 리소스 관리 (정적 리소스, 웹 JAR, index.html, favicon)
+### 3. 리소스 관리
 
 #### 1) 정적 리소스
 
@@ -293,7 +294,77 @@ ___
 
 ### 4. Thymeleaf와 HtmlUnit
 
+#### 1) Thymeleaf
 
+- 스프링 MVC에서 **동적 컨텐츠**를 생성하는 법!
+
+  - 이미 짜여져 있는 판에 값반 바꾸는 식으로 뷰를 생성하고 싶다.
+  - 이런 경우에는 정적 컨텐츠로 생성할 수 없다. 동적으로 생성해야 한다.
+
+- 스프링 부트가 자동 설정을 지원하는 **템플릿 엔진** 에는 `Thymeleaf`, `FreeMaker`, `Groovy`, `Mustache`가 있다.
+
+  - **JSP**가 없다?! 스프링 부트에서는 **JSP**를 권장하지 않는다.
+
+    > 스프링 부트가 지향하는 것과 방향성이 다르다고 함.
+    >
+    > - **JSP**는 **JAR** 패키징 할 때는 동작하지 않고, **WAR** 패키징을 해줘야 한다.
+    > - `Undertow`에서는 **JSP**를 지원하지 않는다.
+    > - `Mock`을 이용한 테스트 중 실제 본문을 확인하기 힘들다. 렌더링 자체를 **서블릿 엔진**이 해줘야 한다.
+
+- **Thymeleaf**는 비교적 최근에 만들어진 템플릿 엔진이다. 
+
+- **사용법**
+
+  - **의존성**을 추가해주자.
+
+    ```xml
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
+    ```
+
+  - 추가해주고 나면, 뷰를 모두 `/src/main/resource/template` 디렉토리에서 찾게 된다.
+
+    - 전형적인 REST Contoller가 아니고, 뷰로 응답해주는 애플리케이션을 만들게 된다.
+
+  - 관련 docs를 통해서 문법을 공부하자...
+
+    [**[_불가능하지만_ 5분안에 시작하기 docs]**](https://www.thymeleaf.org/doc/articles/standarddialect5minutes.html)
+
+    [**[깃허브 예제 코드]**](https://github.com/thymeleaf/thymeleafexamples-stsm/blob/3.0-master/src/main/webapp/WEB-INF/templates/seedstartermng.html)
+
+    
+
+#### 2) HtmlUnit
+
+- HTML을 단위 테스트 할 수 있게 도와주는 툴!
+
+- 예제는 여기서 [**[공식 문서]**](http://htmlunit.sourceforge.net/gettingStarted.html)
+
+- **사용법**
+
+  - **의존성**을 추가해주자.
+
+    ```xml
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>htmlunit-driver</artifactId>
+    	<scope>test</scope>
+    </dependency>
+    
+    <dependency>
+        <groupId>net.sourceforge.htmlunit</groupId>
+        <artifactId>htmlunit</artifactId>
+        <scope>test</scope>
+    </dependency>
+    ```
+
+  - `WebClient`로 요청을 보내고, 결과를 받아서 안에 있는 내용을 `HtmlPage` 인터페이스를 통해 받는다.
+
+    - 본문 확인도 가능하고, 어떤 문자열이 있는지 확인하고... form Submit 테스트도 가능하다.
+
+    
 
 ___
 
@@ -501,3 +572,136 @@ ___
   ```
 
   이렇게 `WebMvcConfigurer`를 상속받아서 설정해주면 된다!
+
+
+
+___
+
+### 8. REST Client
+
+#### 1) 소개
+
+- **REST Client** 자체는 스프링에서 제공해 주는 것이고, 부트는 이를 쉽게 사용할 수 있도록 해준다.
+- 부트에서 이것을 빈으로 등록해주는데, 두 타입의 빈을 등록해 주는게 아니라 `Builder`를 등록해준다.
+- 이 `Builder`를 주입 받아서 직접 빌드해서 가져다 써야 한다.
+- **종류**
+  - 두 가지 종류가 있는데, 둘 다 써도 되고 하나만 써도 되고.. 마음대로..
+  - 둘의 차이는 **동기**이냐 **비동기**이냐!
+
+#### 1) RestTemplate
+
+- Blocking I/O 기반의 **Synchronous** API
+
+  > 해당 메소드가 처리가 되기 전까지는 다음 line으로 이동하지 않는다!
+
+- 쓰기 위해서는 **spring-web** 모듈이 있어야 한다.
+
+- **사용법**
+
+  빌더를 주입받아서, 그 빌더로 **RestTemplate** 객체를 만들어서 사용한다.
+
+  **예시)** `Thread.sleep` 을 사용해 Hello 출력에 5분, World 출력에 3분이 걸리도록 한다.
+
+  ```java
+  @Autowired
+      RestTemplateBuilder restTemplateBuilder;
+  
+      @Override
+      public void run(ApplicationArguments args) throws Exception {
+          RestTemplate restTemplate = restTemplateBuilder.build();
+  
+          String helloResult = restTemplate.getForObject("{$url}", {$type});
+          System.out.println(helloResult);
+          
+          ...
+      }
+  ```
+
+  결과는, **동기식** 이기 때문에 두 메소드를 합친 결과가 나온다.
+
+  ```sh
+  hello
+  world
+  StopWatch '': running time (millis) = 8238
+  ```
+
+  
+
+#### 2) WebClient
+
+- Non-Blocking I/O 기반의 **Asynchronous** API
+
+- 쓰기 위해서는 **spring-webflux** 모듈이 있어야 한다.
+
+- **사용법**
+
+  먼저 **spring-webflux**의 의존성을 추가해준다.
+
+  ```xml
+  <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-webflux</artifactId>
+  </dependency>
+  ```
+
+  똑같이 빌더를 주입받아서 만들어주면 된다.
+
+  ```java
+  @Autowired
+  WebClient.Builder builder;
+  
+  @Override
+  public void run(ApplicationArguments args) throws Exception {
+      WebClient webClient = builder.build();
+  
+      Mono<String> helloMono = webClient.get().uri("{$url}")
+          .retrieve()
+          .bodyToMono({$type});
+  
+      helloMono.subscribe(string -> { ... }) // 콜백 함수
+  }
+  ```
+
+  **비동기식**이기 때문에, 각자 돌고, 3초와 5초만에 응답을 준다.
+
+  ```sh
+  world
+  StopWatch '': running time (millis) = 3406
+  
+  hello
+  StopWatch '': running time (millis) = 5354
+  ```
+
+  
+
+#### 3) 커스터마이징
+
+- **로컬 커스터마이징**
+
+  - 메소드 안에서 만든 **RestTemplate**이나 **WebClient** 객체들은 해당 메소드 내에서만 사용할 수 있다.
+
+  - 커스터마이징을 통해서 클래스 전역으로 뽑아줄 수 있나 봄!
+
+  - 빌더에서 `builder()`를 호출해 실제 객체를 만들어내기 전에 다양한 옵션들을 설정해 줄 수 있다.
+
+    
+
+- **글로벌 커스터마이징**
+
+  - `@SpringBootApplication` 클래스에 빈으로 등록해준다.
+
+    ```java
+    @Bean
+    public WebClientCustomizer webClientCustomizer() {
+        return new WebClientCustomizer() {
+            @Override
+            public void customize(WebClient.Builder webClientBuilder) {
+                webClientBuilder.baseUrl("{$url}");
+            }
+        };
+    }
+    ```
+
+  - 빌더에 기본적으로 저렇게 **baseURL**을 설정해준 상태로 모든 빈들에게 주입이 된다.
+
+  
